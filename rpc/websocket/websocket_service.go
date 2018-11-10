@@ -128,6 +128,8 @@ func (service *WebSocketService) ServeHTTP(
 		}
 		if msgType == websocket.BinaryMessage {
 			go service.handle(data, mutex, response, request, conn)
+		} else if msgType == websocket.TextMessage {
+			go service.handle2(data, mutex, response, request, conn)
 		}
 	}
 }
@@ -148,6 +150,31 @@ func (service *WebSocketService) handle(
 	if err == nil {
 		_, err = writer.Write(id)
 	}
+	if err == nil {
+		_, err = writer.Write(data)
+	}
+	if err == nil {
+		err = writer.Close()
+	}
+	mutex.Unlock()
+	if err != nil {
+		rpc.FireErrorEvent(service.Event, err, context)
+	}
+	service.releaseContext(context)
+}
+
+func (service *WebSocketService) handle2(
+	data []byte,
+	mutex *sync.Mutex,
+	response http.ResponseWriter,
+	request *http.Request,
+	conn *websocket.Conn) {
+	context := service.acquireContext()
+	context.InitHTTPContext(service, response, request)
+	context.WebSocket = conn
+	data = service.Handle(data, context)
+	mutex.Lock()
+	writer, err := context.WebSocket.NextWriter(websocket.TextMessage)
 	if err == nil {
 		_, err = writer.Write(data)
 	}

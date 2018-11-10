@@ -20,6 +20,7 @@
 package rpc
 
 import (
+	"fmt"
 	"io"
 	"net"
 	"time"
@@ -85,6 +86,10 @@ func recvData(reader io.Reader, data *packet) (err error) {
 		return
 	}
 	size := util.ToUint32(header)
+	if size > 1024*32 {
+		err = fmt.Errorf("size error")
+		return
+	}
 	data.fullDuplex = (size&0x80000000 != 0)
 	if data.fullDuplex {
 		size &= 0x7FFFFFFF
