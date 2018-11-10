@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hprose/hprose-golang/rpc"
+	"github.com/WangAngIOT/hprose-golang/rpc"
 )
 
 // StatFilter ...

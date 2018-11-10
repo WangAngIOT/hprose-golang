@@ -5,8 +5,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/hprose/hprose-golang/rpc"
-	_ "github.com/hprose/hprose-golang/rpc/websocket"
+	"github.com/WangAngIOT/hprose-golang/rpc"
+	_ "github.com/WangAngIOT/hprose-golang/rpc/websocket"
 )
 
 // Stub is ...

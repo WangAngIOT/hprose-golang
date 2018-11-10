@@ -26,7 +26,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/hprose/hprose-golang/util"
+	"github.com/WangAngIOT/hprose-golang/util"
 )
 
 // ByteReader implements the io.Reader and io.ByteReader interfaces by reading

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hprose/hprose-golang/io"
+	"github.com/WangAngIOT/hprose-golang/io"
 )
 
 func BenchmarkByteWriter(b *testing.B) {
