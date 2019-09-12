@@ -25,8 +25,8 @@ import (
 	"net"
 	"time"
 
-	hio "github.com/WangAngIOT/hprose-golang/io"
-	"github.com/WangAngIOT/hprose-golang/util"
+	hio "github.com/angwangiot/hprose-golang/io"
+	"github.com/angwangiot/hprose-golang/util"
 )
 
 type packet struct {

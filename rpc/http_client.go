@@ -26,7 +26,7 @@ import (
 	"net/http"
 	"net/http/cookiejar"
 
-	hio "github.com/WangAngIOT/hprose-golang/io"
+	hio "github.com/angwangiot/hprose-golang/io"
 )
 
 var cookieJar, _ = cookiejar.New(nil)

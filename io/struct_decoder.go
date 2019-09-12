@@ -28,7 +28,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/WangAngIOT/hprose-golang/util"
+	"github.com/angwangiot/hprose-golang/util"
 )
 
 func readDigitAsStruct(r *Reader, v reflect.Value, tag byte) {

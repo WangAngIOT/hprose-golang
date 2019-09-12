@@ -23,8 +23,8 @@ import (
 	"encoding/json"
 	"sync/atomic"
 
-	"github.com/WangAngIOT/hprose-golang/io"
-	"github.com/WangAngIOT/hprose-golang/rpc"
+	"github.com/angwangiot/hprose-golang/io"
+	"github.com/angwangiot/hprose-golang/rpc"
 )
 
 // ClientFilter is a JSONRPC Client Filter

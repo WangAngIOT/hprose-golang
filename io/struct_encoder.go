@@ -25,7 +25,7 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/WangAngIOT/hprose-golang/util"
+	"github.com/angwangiot/hprose-golang/util"
 )
 
 type fieldCache struct {

@@ -25,7 +25,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/WangAngIOT/hprose-golang/util"
+	"github.com/angwangiot/hprose-golang/util"
 )
 
 func readLongAsComplex128(r *Reader) complex128 {

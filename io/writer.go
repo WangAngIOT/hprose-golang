@@ -28,7 +28,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/WangAngIOT/hprose-golang/util"
+	"github.com/angwangiot/hprose-golang/util"
 )
 
 // Writer is a fine-grained operation struct for Hprose serialization

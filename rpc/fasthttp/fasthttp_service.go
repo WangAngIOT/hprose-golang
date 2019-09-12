@@ -24,8 +24,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/WangAngIOT/hprose-golang/rpc"
-	"github.com/WangAngIOT/hprose-golang/util"
+	"github.com/angwangiot/hprose-golang/rpc"
+	"github.com/angwangiot/hprose-golang/util"
 	"github.com/valyala/fasthttp"
 )
 
